@@ -8,4 +8,4 @@ docker exec -it fume bin/bash
 mysql -uroot -ppassword
 create database fume_database;
 use fume_database;
-source /FUME-DB-Create.sql
+source ./FUME-DB-Create.sql

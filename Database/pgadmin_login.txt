@@ -1,0 +1,7 @@
+admin@admin.de
+admin
+
+172.17.0.1
+5432
+admin
+admin
