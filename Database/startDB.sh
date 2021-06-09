@@ -1,7 +1,7 @@
 # docker build ./ -t databasedocker 
 # docker run -d -p 5332:5432 --rm --name postgres_database_container databasedocker:latest
 # docker pull postgres
-docker run --name postgresDB -p 5432:5432 -e POSTGRES_PASSWORD=admin -d postgres:latest
+docker run --rm --name postgresDB -p 5432:5432 -e POSTGRES_PASSWORD=admin -d postgres:latest
 
 # docker exec -it /etc/init.d/postgresql start &&\
 #     psql --command "CREATE DATABASE FUME-DB;" &&\
