@@ -140,7 +140,7 @@ function salesdashboard() {
   return (
     <>
     <div class = "flex-container">
-      <div>
+      <div style={{ backgroundColor: "white", borderRadius: '10px'}}>
 
         <h2>
           Kundenentwicklung
@@ -157,7 +157,7 @@ function salesdashboard() {
 
       </div>
 
-      <div>
+      <div style={{ backgroundColor: "white", borderRadius: '10px'}}>
 
         <h2>
           Variantenauslastung
@@ -188,7 +188,7 @@ function salesdashboard() {
 
       </div>
 
-      <div>
+      <div style={{ backgroundColor: "white", borderRadius: '10px'}}>
 
         <h2>
           Abopreisbestandteile
@@ -216,7 +216,7 @@ function salesdashboard() {
 
       </div>
 
-      <div>
+      <div style={{ backgroundColor: "white", borderRadius: '10px'}}>
 
         <h2>
           Kundenverteilung
