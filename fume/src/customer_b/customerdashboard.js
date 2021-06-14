@@ -48,7 +48,7 @@ function customerdashboard() {
   return (
     <>
     <br></br>
-    <table>
+    <table id="Kundentable">
       <tr>
         <th>Kunden_ID</th>
         <th>Vorname</th>

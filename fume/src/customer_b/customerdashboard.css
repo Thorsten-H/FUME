@@ -1,5 +1,6 @@
-table {
+.Kundentable#table {
     border-collapse:separate;
+    background-color: white;
     border:solid black 1px;
     border-radius:6px;
     -moz-border-radius:6px;
