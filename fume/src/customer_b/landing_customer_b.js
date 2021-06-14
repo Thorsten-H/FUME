@@ -15,19 +15,19 @@ function Customer_B() {
         <table>
           <tr >
             <td>
-              <button style={{ backgroundColor: "#ffd364", borderRadius: '5px', border:'none'}} to="/customer_b/workshop_planing">
+              <Button component={Link} style={{ backgroundColor: "#ffd364", borderRadius: '5px', border:'none'}} to="/">
                 <img src={logo} alt="FUME-Logo" style={{height:'60px'}}/>
-              </button>
+              </Button>
             </td>
             <td >
               <input style={{ backgroundColor: "#1a9988", border:'none', width:'150px'}}/>
             </td>
             <td>
-              <ButtonGroup variant="text" color="primary" aria-label="text primary button group">
-                <Button component={Link} style={{ color: "black", backgroundColor: "#ffd364", height:'65px', width:'200px'}} to="/customer_b/sales">   Sales Dashboard</Button>
-                <Button component={Link} style={{ color: "black", backgroundColor: "#ffd364", height:'65px', width:'200px'}} to="/customer_b/customer">Kundenübersicht</Button>
-                <Button component={Link} style={{ color: "black", backgroundColor: "#ffd364", height:'65px', width:'200px'}} to="/customer_b/workshop_planing">Werkstattplanung</Button>
-                <Button component={Link} style={{ color: "black", backgroundColor: "#ffd364", height:'65px', width:'200px'}} to="/customer_b/order_planing">Auftragsplanung</Button>
+              <ButtonGroup color="primary" aria-label="outlined primary button group">
+                <Button component={Link} style={{ color: "#ffd364", borderColor: "#ffd364", height:'70px', width:'200px'}} to="/customer_b/sales">   Sales Dashboard</Button>
+                <Button component={Link} style={{ color: "#ffd364", borderColor: "#ffd364", height:'70px', width:'200px'}} to="/customer_b/customer">Kundenübersicht</Button>
+                <Button component={Link} style={{ color: "#ffd364", borderColor: "#ffd364", height:'70px', width:'200px'}} to="/customer_b/workshop_planing">Werkstattplanung</Button>
+                <Button component={Link} style={{ color: "#ffd364", borderColor: "#ffd364", height:'70px', width:'200px'}} to="/customer_b/order_planing">Auftragsplanung</Button>
               </ButtonGroup>
             </td>
           </tr>
