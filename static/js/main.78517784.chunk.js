@@ -1,2 +1,0 @@
-(this.webpackJsonpfume=this.webpackJsonpfume||[]).push([[0],{46:function(o,n,t){"use strict";t.r(n);var e=t(42),c=t(43),a=e.getInput("action");console.log("Hello ".concat(a,"!"));(new Date).toTimeString();var i=JSON.stringify(c.context.payload,void 0,2);console.log("The event payload: ".concat(i))},72:function(o,n){},74:function(o,n){}},[[46,1,2]]]);
-//# sourceMappingURL=main.78517784.chunk.js.map
