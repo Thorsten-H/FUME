@@ -46,7 +46,7 @@ function customerdashboard() {
   });
   console.log(table_content)
   return (
-    <>
+    <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '25vh'}}>
       <br></br>
       <table style={{
         borderCollapse: "separate",
@@ -67,7 +67,7 @@ function customerdashboard() {
       {table_content}
 
     </table>
-    </>
+    </div>
   );
 }
 

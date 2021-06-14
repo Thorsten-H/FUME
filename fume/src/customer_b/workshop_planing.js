@@ -10,22 +10,22 @@ function Workshop_planing() {
     {
       label: "Kapazität",
       gesamt: 20000,
-      frauen: 8000,
-      herren: 7000,
-      frei: 5000
+      Frauenrad: 8000,
+      Herrenrad: 7000,
+      Frei: 5000
     }
   ]
 
   const verfuegbarkeit = [
     {
-      type: "Herren",
-      bereit: 5000,
-      defekt: 2000
+      type: "Herrenrad",
+      Bereit: 5000,
+      Defekt: 2000
     },
     {
-      type: "Damen",
-      bereit: 7500,
-      defekt: 500
+      type: "Damenrad",
+      Bereit: 7500,
+      Defekt: 500
     }
   ]
 
@@ -224,7 +224,7 @@ function Workshop_planing() {
 
     <div className = "flex-container">
 
-      <div>
+      <div style={{ backgroundColor: "white", borderRadius: '10px'}}>
 
         <h2>
           Lagerkapazität
@@ -248,15 +248,15 @@ function Workshop_planing() {
           <YAxis dataKey="label" type = "category"/>
           <Tooltip />
           <Legend />
-          <Bar dataKey="frauen" stackId="a" fill="#82ca9d" />
-          <Bar dataKey="herren" stackId="a" fill="#8884d8" />
-          <Bar dataKey="frei" stackId="a" fill="#5484d8" />
+          <Bar dataKey="Frauenrad" stackId="a" fill="#82ca9d" />
+          <Bar dataKey="Herrenrad" stackId="a" fill="#8884d8" />
+          <Bar dataKey="Frei" stackId="a" fill="#5484d8" />
 
         </BarChart>
 
       </div>
 
-      <div>
+      <div style={{ backgroundColor: "white", borderRadius: '10px'}}> 
 
         <h2>
           Verfügbarkeit
@@ -280,8 +280,8 @@ function Workshop_planing() {
           <YAxis dataKey="type" type = "category"/>
           <Tooltip />
           <Legend />
-          <Bar dataKey="bereit" stackId="a" fill="#82ca9d" />
-          <Bar dataKey="defekt" stackId="a" fill="#8884d8" />
+          <Bar dataKey="Bereit" stackId="a" fill="#82ca9d" />
+          <Bar dataKey="Defekt" stackId="a" fill="#8884d8" />
 
         </BarChart>
 

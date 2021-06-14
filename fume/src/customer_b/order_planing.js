@@ -3,7 +3,9 @@ import React, { Component }  from 'react';
 
 function order_planing() {
   return (
-    <Calendar />
+    <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '45vh'}}>
+      <Calendar />
+    </div>
   );
 }
 

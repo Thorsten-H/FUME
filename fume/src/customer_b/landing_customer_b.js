@@ -20,14 +20,14 @@ function Customer_B() {
               </button>
             </td>
             <td >
-              <input style={{ backgroundColor: "#1a9988", border:'none', width:'300px'}}/>
+              <input style={{ backgroundColor: "#1a9988", border:'none', width:'150px'}}/>
             </td>
             <td>
               <ButtonGroup variant="text" color="primary" aria-label="text primary button group">
-                <Button component={Link} style={{ color: "black"}} to="/customer_b/sales">Sales Dashboard</Button>
-                <Button component={Link} style={{ color: "black"}} to="/customer_b/customer">Kundenübersicht</Button>
-                <Button component={Link} style={{ color: "black"}} to="/customer_b/workshop_planing">Werkstattplanung</Button>
-                <Button component={Link} style={{ color: "black"}} to="/customer_b/order_planing">Auftragsplanung</Button>
+                <Button component={Link} style={{ color: "black", backgroundColor: "#ffd364", height:'65px', width:'200px'}} to="/customer_b/sales">   Sales Dashboard</Button>
+                <Button component={Link} style={{ color: "black", backgroundColor: "#ffd364", height:'65px', width:'200px'}} to="/customer_b/customer">Kundenübersicht</Button>
+                <Button component={Link} style={{ color: "black", backgroundColor: "#ffd364", height:'65px', width:'200px'}} to="/customer_b/workshop_planing">Werkstattplanung</Button>
+                <Button component={Link} style={{ color: "black", backgroundColor: "#ffd364", height:'65px', width:'200px'}} to="/customer_b/order_planing">Auftragsplanung</Button>
               </ButtonGroup>
             </td>
           </tr>
