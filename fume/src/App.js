@@ -19,11 +19,6 @@ function App() {
         <Route path="/customer_b/" component={Customer_B} />
         <Route path="/" component={Landing} />
       </Switch>
-      <Calendar
-        onChange={e => console.log(e)}
-        showWeekNumbers
-        value={value}
-      />
     </div>
   );
 }
