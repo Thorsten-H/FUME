@@ -152,51 +152,67 @@ function Workshop_planing() {
       'Bike_ID': 9756,
       'Erstellungsdatum': "11.6.2021",
       'Bearbeitungsdatum': "15.6.2021"
+    },
+    {
+      'BikeService_ID': 4,
+      'Serviceart': "Sessel einstellen",
+      'Bike_ID': 9756,
+      'Erstellungsdatum': "11.6.2021",
+      'Bearbeitungsdatum': "15.6.2021"
+    },
+    {
+      'BikeService_ID': 5,
+      'Serviceart': "Sessel austauschen",
+      'Bike_ID': 9762,
+      'Erstellungsdatum': "11.6.2021",
+      'Bearbeitungsdatum': "17.6.2021"
     }
   ]
 
-  let reparatur_list = []
-
+  
   const get_reparaturen = () => {
     tmp_tag = tag
     tmp_monat = monat
     tmp_jahr = jahr
-
+    
     let tmp_datum = String(tmp_tag) + "." + String(tmp_monat) + "." + String(tmp_jahr)
-    console.log("datum:", tmp_datum)
+    
+    let reparatur_list = []
+    reparatur_list.push(
+      <div class = "flex-container">
+        <div>
+            ID
+          </div>
+          <div>
+            BikeID
+          </div>
+          <div>
+            Servie Leistung
+          </div>
+      </div>
+    )
 
     reparatur_daten.forEach((element) => {
-      console.log(element.Bearbeitungsdatum)
-      console.log(tmp_datum)
+
       if (element.Bearbeitungsdatum === tmp_datum) {
 
         reparatur_list.push(
           <div class = "flex-container">
-            <tr>
               <div>
                 {element.BikeService_ID}
               </div>
-              <td>
-                -
-              </td>
               <div>
                 {element.Bike_ID}
               </div>
-              <td>
-                -
-              </td>
               <div>
                 {element.Serviceart}
               </div>
-            </tr>
           </div>
         )
-        console.log("ja")
           
       }
       else {
         console.log("nichts")
-        
       }
     
     })
@@ -271,11 +287,12 @@ function Workshop_planing() {
 
       </div>
 
-      <div>
+      <div style={{ backgroundColor: "white", borderRadius: '10px'}}>
 
         <h2>
           Werkstattplan
         </h2>
+        <br/>
 
         <div class = "flex-container">
 
@@ -300,13 +317,10 @@ function Workshop_planing() {
           </p>
 
         </div>
+        <br/>
 
-        <div class = "flex-container">
-          <table>
-            <tbody>
-              {reparatur_liste_voll}
-            </tbody>
-          </table>
+        <div class = "flex-container-col">
+          {reparatur_liste_voll}
         </div>
 
       </div>
