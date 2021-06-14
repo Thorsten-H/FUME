@@ -1,12 +1,4 @@
-.Kundentable#table {
-    border-collapse:separate;
-    background-color: white;
-    border:solid black 1px;
-    border-radius:6px;
-    -moz-border-radius:6px;
-}
-
-td, th {
+.Cell{
     border-left:solid black 1px;
     border-top:solid black 1px;
 }
