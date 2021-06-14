@@ -115,7 +115,7 @@ function salesdashboard() {
       full: 5000,
     },
     {
-      target_group: "Alternative Erwachsene",
+      target_group: "Rest",
       male: 800,
       female: 900,
       full: 4000,
@@ -146,7 +146,7 @@ function salesdashboard() {
           Kundenentwicklung
         </h2>
 
-        <LineChart width = {1000} height = {600} data = {lineData}>
+        <LineChart width = {1000} height = {300} data = {lineData}>
 
           <XAxis dataKey = "year"/>
           <YAxis/>
@@ -201,8 +201,8 @@ function salesdashboard() {
                 data={abopreisteile}
                 cx="50%"
                 cy="50%"
-                outerRadius={100}
-                innerRadius = {50}
+                outerRadius={150}
+                innerRadius = {75}
                 fill="#8884d8"
                 label = {renderCustomizedLabel}
                 labelLine = {false}
@@ -215,7 +215,6 @@ function salesdashboard() {
           </PieChart>
 
       </div>
-
 
       <div>
 
