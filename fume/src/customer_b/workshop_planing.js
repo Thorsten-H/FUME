@@ -36,6 +36,7 @@ function Workshop_planing() {
   const [monat, update_monat] = useState(6);
   const [jahr, update_jahr] = useState(2021)
   const [wochentag, update_wochentag] = useState("Montag")
+  const [reparatur_liste_voll, update_reparatur_liste] = useState()
 
   var tmp_tag = 0
   var tmp_monat = 0
@@ -83,6 +84,7 @@ function Workshop_planing() {
     update_tag(tmp_tag)
     update_monat(tmp_monat)
     update_jahr(tmp_jahr)
+    get_reparaturen()
 
   }
 
@@ -125,24 +127,82 @@ function Workshop_planing() {
     update_tag(tmp_tag)
     update_monat(tmp_monat)
     update_jahr(tmp_jahr)
+    get_reparaturen()
 
   }
 
-  // const reparatur_daten = [
-  //   {
-  //     'BikeService_ID': 1,
-  //     'Serviceart': 'Felgen wechseln',
-  //     'Bike_ID': 1248,
-  //     'Erstellungsdatum': '',
-  //     'Bearbeitungsdatum': 'Datum'
-  //   },
-  // ]
+  const reparatur_daten = [
+    {
+      'BikeService_ID': 1,
+      'Serviceart': "Felgen wechseln",
+      'Bike_ID': 1248,
+      'Erstellungsdatum': "12.6.2021",
+      'Bearbeitungsdatum': "14.6.2021"
+    },
+    {
+      'BikeService_ID': 2,
+      'Serviceart': "Reifen aufpumpen",
+      'Bike_ID': 9756,
+      'Erstellungsdatum': "11.6.2021",
+      'Bearbeitungsdatum': "14.6.2021"
+    },
+    {
+      'BikeService_ID': 3,
+      'Serviceart': "Sessel austauschen",
+      'Bike_ID': 9756,
+      'Erstellungsdatum': "11.6.2021",
+      'Bearbeitungsdatum': "15.6.2021"
+    }
+  ]
 
-  // const get_reparaturen = () => {
-  //   tmp_tag = tag
-  //   tmp_monat = monat
-  //   tmp_jahr = jahr
-  // }
+  let reparatur_list = []
+
+  const get_reparaturen = () => {
+    tmp_tag = tag
+    tmp_monat = monat
+    tmp_jahr = jahr
+
+    let tmp_datum = String(tmp_tag) + "." + String(tmp_monat) + "." + String(tmp_jahr)
+    console.log("datum:", tmp_datum)
+
+    reparatur_daten.forEach((element) => {
+      console.log(element.Bearbeitungsdatum)
+      console.log(tmp_datum)
+      if (element.Bearbeitungsdatum === tmp_datum) {
+
+        reparatur_list.push(
+          <div class = "flex-container">
+            <tr>
+              <div>
+                {element.BikeService_ID}
+              </div>
+              <td>
+                -
+              </td>
+              <div>
+                {element.Bike_ID}
+              </div>
+              <td>
+                -
+              </td>
+              <div>
+                {element.Serviceart}
+              </div>
+            </tr>
+          </div>
+        )
+        console.log("ja")
+          
+      }
+      else {
+        console.log("nichts")
+        
+      }
+    
+    })
+
+    update_reparatur_liste(reparatur_list)
+  }
 
   return (
 
@@ -217,7 +277,7 @@ function Workshop_planing() {
           Werkstattplan
         </h2>
 
-        <div>
+        <div class = "flex-container">
 
           <IconButton onClick = {() => date_back()}>
 
@@ -241,8 +301,12 @@ function Workshop_planing() {
 
         </div>
 
-        <div>
-          {/* {get_reparaturen()} */}
+        <div class = "flex-container">
+          <table>
+            <tbody>
+              {reparatur_liste_voll}
+            </tbody>
+          </table>
         </div>
 
       </div>
