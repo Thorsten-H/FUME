@@ -222,7 +222,7 @@ function Workshop_planing() {
 
   return (
 
-    <div>
+    <div className = "flex-container">
 
       <div>
 
@@ -287,7 +287,7 @@ function Workshop_planing() {
 
       </div>
 
-      <div style={{ backgroundColor: "white", borderRadius: '10px'}}>
+      <div style={{ backgroundColor: "white", borderRadius: '10px', width: "80%"}}>
 
         <h2>
           Werkstattplan
