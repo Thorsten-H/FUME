@@ -1,0 +1,30 @@
+Kunden
+{
+'Kunden_ID': 'currentDate',
+'Vorname':'String',
+'Nachname': 'String',
+'Adresse': 'String',
+'Aktiv': 'Boolean',
+'Beginndatum': 'Datum',
+'Enddatum': 'Datum'
+}
+
+Bike
+{
+'Bike_ID': 'currentDate',
+'Kunden_ID': 'currentDate',
+'Fahrradtyp': 'String',
+'Kaufdatum': 'Datum',
+'GPS': 'String',
+'Standort': 'String',
+'Status': 'String'
+}
+
+BikeService
+{
+'BikeService_ID': 'currentDate',
+'Serviceart': 'String',
+'Bike_ID': 'Datum',
+'Erstellungsdatum': 'Datum',
+'Bearbeitungsdatum': 'Datum'
+}
