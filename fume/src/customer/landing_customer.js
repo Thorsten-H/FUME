@@ -3,6 +3,7 @@ import My_bike from "./my_bike"
 import Find_bike from "./find_bike"
 import Customer_overview from "./customer_overview"
 import Customer_care from "./customer_care"
+import React, { Component }  from 'react';
 
 function Customer() {
   return (

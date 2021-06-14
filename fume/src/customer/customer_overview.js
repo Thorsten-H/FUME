@@ -1,3 +1,5 @@
+import React, { Component }  from 'react';
+
 function customer_overview() {
   return (
     <h1>customer_overview</h1>

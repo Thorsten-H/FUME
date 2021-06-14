@@ -1,3 +1,5 @@
+import React, { Component }  from 'react';
+
 function customer_care() {
   return (
     <h1>customer_care</h1>
