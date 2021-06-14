@@ -2,10 +2,15 @@
   "name": "fume",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://thorsten-h.github.io/FUME/",
   "dependencies": {
+    "@actions/core": "^1.4.0",
+    "@actions/github": "^5.0.0",
     "@testing-library/jest-dom": "^5.13.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "jquery": "^3.6.0",
+    "pg": "^8.6.0",
     "react": "^17.0.2",
     "react-calendar": "^3.4.0",
     "react-dom": "^17.0.2",
@@ -15,6 +20,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -37,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.0"
   }
 }
