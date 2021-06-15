@@ -21,6 +21,7 @@ function customerdashboard() {
   let table_content = []
 
   customerData.forEach(e => {
+    console.log(e.Aktiv)
     table_content.push(
       <tr>
         <td className="Cell">
@@ -40,6 +41,9 @@ function customerdashboard() {
         </td>
         <td className="Cell">
           {e.Enddatum}
+        </td>
+        <td className="Cell">
+          {e.Aktiv.toString()}
         </td>
       </tr>
     )
@@ -63,6 +67,7 @@ function customerdashboard() {
         <th className="Cell">Adresse</th>
         <th className="Cell">Beginndatum</th>
         <th className="Cell">Enddatum</th>
+        <th className="Cell">Aktiv</th>
       </tr>
       {table_content}
 
