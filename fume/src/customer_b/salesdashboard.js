@@ -122,7 +122,7 @@ function salesdashboard() {
     },
   ]
 
-  const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', "#FF8043", "#FF8046", "#FF8049", "#FF8041"];
+  const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', "#e813ba", "#9443ff", "#43e3ff", "#9443ff"];
 
   const RADIAN = Math.PI / 180;
   const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
