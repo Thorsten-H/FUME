@@ -19,8 +19,7 @@ function Customer_B() {
                 <img src={logo} alt="FUME-Logo" style={{height:'60px'}}/>
               </Button>
             </td>
-            <td >
-              <input style={{ backgroundColor: "#1a9988", border:'none', width:'150px'}}/>
+            <td style={{paddingRight:"100px"}}>
             </td>
             <td>
               <ButtonGroup color="primary" aria-label="outlined primary button group">
