@@ -10,7 +10,7 @@ function App() {
         <div>
             <div>
                 <br></br>
-                <img src={logo} alt="FUME-Logo" />
+                <img src={logo} alt="FUME-Logo" style={{borderRadius: "5px"}}/>
             </div>
             <div>
                 <br></br>
