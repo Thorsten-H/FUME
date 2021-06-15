@@ -65,16 +65,16 @@ function my_bike() {
 
       <h1>Fahrradübersicht</h1>
       <div>
-        <img usemap="#bike" src={bike} width="600" height="357" alt="Fahrrad"></img>
+        <img usemap="#bike" src={bike} width="735" height="439" alt="Fahrrad"></img>
         <map name ="bike">
-          <area id = "Vorderreifen" shape="rectangle" coords="4,166,156,3,260,3,310,60,310,79,110,300,40,290,4,240"  alt="Vorderreifen"></area>
-          <area id = "Vorderlicht" shape="rectangle" coords=""  alt="Vorderlicht"></area>
-          <area id = "Pedale" shape="rectangle" coords=""  alt="Pedale"></area>
-          <area id = "Lenkrad" shape="rectangle" coords=""  alt="Lenkrad"></area>
-          <area id = "Sattel" shape="rectangle" coords=""  alt="Sattel"></area>
-          <area id = "Schaltung" shape="rectangle" coords=""  alt="Schaltung"></area>
-          <area id = "Hinterlicht" shape="rectangle" coords=""  alt="Hinterlicht"></area>
-          <area id = "Hinterreifen" shape="rectangle" coords=""  alt="Hinterreifen"></area>
+          <area id = "Vorderreifen" shape="rectangle" coords="57,324,251,371"  alt="Vorderreifen"></area>
+          <area id = "Frontlicht" shape="rectangle" coords="20,152,189,202"  alt="Vorderlicht"></area>
+          <area id = "Pedale" shape="rectangle" coords="305,347,430,397"  alt="Pedale"></area>
+          <area id = "Lenkrad" shape="rectangle" coords="10,21,146,69"  alt="Lenkrad"></area>
+          <area id = "Sattel" shape="rectangle" coords="528,20,655,71"  alt="Sattel"></area>
+          <area id = "Schaltung" shape="rectangle" coords="361,199,528,249"  alt="Schaltung"></area>
+          <area id = "Rücklicht" shape="rectangle" coords="545,146,706,197"  alt="Rücklicht"></area>
+          <area id = "Hinterreifen" shape="rectangle" coords="493,322,689,372"  alt="Hinterreifen"></area>
         </map>
 
       </div>        
