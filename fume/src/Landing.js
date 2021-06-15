@@ -17,8 +17,8 @@ function App() {
                 <br></br>
                 <br></br>
                 <ButtonGroup size="large" color="#3f6d7b" aria-label="large outlined primary button group">
-                    <Button component={Link} style={{ backgroundColor: "#ffd364"}} to="/customer" >Customer</Button>
-                    <Button component={Link} style={{ backgroundColor: "#ffd364"}} to="/customer_b/" >Business</Button>
+                    <Button component={Link} style={{ backgroundColor: "#ffd364"}} to="/customer/my_bike" >Customer</Button>
+                    <Button component={Link} style={{ backgroundColor: "#ffd364"}} to="/customer_b/sales" >Business</Button>
                 </ButtonGroup>
             </div>
             
