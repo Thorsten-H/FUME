@@ -20,9 +20,9 @@ function customer_overview() {
     console.log(e.Aktiv)
     table_content.push(
       <tr>
-        <td className="Cell">
+        {/* <td className="Cell">
           {e.Kunden_ID}
-        </td >
+        </td > */}
         <td className="Cell"> 
           {e.Vorname}
         </td>
@@ -35,12 +35,12 @@ function customer_overview() {
         <td className="Cell">
           {e.Beginndatum}
         </td>
-        <td className="Cell">
+        {/* <td className="Cell">
           {e.Enddatum}
         </td>
         <td className="Cell">
           {e.Aktiv.toString()}
-        </td>
+        </td> */}
       </tr>
     )
   });
@@ -57,13 +57,13 @@ function customer_overview() {
     
     className="kudentable">
       <tr>
-        <th className="Cell">Kunden_ID</th>
+        {/* <th className="Cell">Kunden_ID</th> */}
         <th className="Cell">Vorname</th>
         <th className="Cell">Nachname</th>
         <th className="Cell">Adresse</th>
         <th className="Cell">Beginndatum</th>
-        <th className="Cell">Enddatum</th>
-        <th className="Cell">Aktiv</th>
+        {/* <th className="Cell">Enddatum</th>
+        <th className="Cell">Aktiv</th> */}
       </tr>
       {table_content}
 
