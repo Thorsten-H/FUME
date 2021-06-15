@@ -52,8 +52,6 @@ function my_bike() {
   const DropdownExampleSelection = () => (
     <Dropdown
       placeholder='Fehlerquelle auswählen'
-      fluid
-      selection
       options={errorOptions}
     />
   )
@@ -64,8 +62,8 @@ function my_bike() {
     <div> 
 
       <h1>Fahrradübersicht</h1>
-      <div class='flex-container' style={{ backgroundColor: "white", borderRadius: '10px', width: '40%',alignItems:'center'}}>
-        <img usemap="#bike" src={bike} width="735" height="439" alt="Fahrrad"></img>
+      <div >
+        <img usemap="#bike" src={bike} width="735" height="439" alt="Fahrrad" style={{borderRadius: '10px'}} ></img>
         <map name ="bike">
           <area id = "Vorderreifen" shape="rect" coords="57,325,251,376"  alt="Vorderreifen"></area>
           <area id = "Frontlicht" shape="rect" coords="21,144,178,195"  alt="Vorderlicht"></area>
@@ -79,13 +77,16 @@ function my_bike() {
 
       </div>        
 
-      <div style={{ backgroundColor: "white", borderRadius: '10px',width: '40%'}}>
+      <div >
+        <div style={{backgroundColor: "white", borderRadius: '10px', width: '40%'}}>
+          <h2>
+            Fehlermeldung anlegen
+          </h2>
 
-        <h2>
-          Fehlermeldung anlegen
-        </h2>
+          <DropdownExampleSelection/>
+        </div>
 
-        <DropdownExampleSelection/>
+        
       </div>
     </div>
 
