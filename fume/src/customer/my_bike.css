@@ -1,0 +1,19 @@
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.flex-container > div {
+    margin: 12px;
+}
+
+.flex-container-col {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.flex-container-col > div {
+    margin: 12px;
+}
