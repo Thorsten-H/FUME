@@ -61,10 +61,10 @@ function my_bike() {
   return (
 
     
-    <div>
+    <div> 
 
       <h1>Fahrradübersicht</h1>
-      <div>
+      <div class='flex-container' style={{ backgroundColor: "white", borderRadius: '10px', width: '40%',alignItems:'center'}}>
         <img usemap="#bike" src={bike} width="735" height="439" alt="Fahrrad"></img>
         <map name ="bike">
           <area id = "Vorderreifen" shape="rect" coords="57,325,251,376"  alt="Vorderreifen"></area>
@@ -79,7 +79,7 @@ function my_bike() {
 
       </div>        
 
-      <div style={{ backgroundColor: "white", borderRadius: '10px', width: "80%"}}>
+      <div style={{ backgroundColor: "white", borderRadius: '10px',width: '40%'}}>
 
         <h2>
           Fehlermeldung anlegen
