@@ -1,6 +1,7 @@
 import React, { Component }  from 'react';
 import bike from './../asset/bike_fume.png'
 import { Dropdown } from 'semantic-ui-react'
+import { TextField } from '@material-ui/core';
 
 
 function my_bike() {
@@ -12,14 +13,14 @@ function my_bike() {
       value: 'Vorderreifen'
     },
     {
-      key: 'Vorderlicht',
-      text: 'Vorderlicht',
-      value: 'Vorderlicht'
+      key: 'Frontlicht',
+      text: 'Frontlicht',
+      value: 'Frontlicht'
     },
     {
-      key: 'Pedale',
-      text: 'Pedale',
-      value: 'Pedale'
+      key: 'Pedal',
+      text: 'Pedal',
+      value: 'Pedal'
     },
     {
       key: 'Lenkrad',
@@ -37,9 +38,9 @@ function my_bike() {
       value: 'Schaltung'
     },
     {
-      key: 'Hinterlicht',
-      text: 'Hinterlicht',
-      value: 'Hinterlicht'
+      key: 'Rücklicht',
+      text: 'Rücklicht',
+      value: 'Rücklicht'
     },
     {
       key: 'Hinterreifen',
@@ -82,8 +83,38 @@ function my_bike() {
           <h2>
             Fehlermeldung anlegen
           </h2>
+          
 
-          <DropdownExampleSelection/>
+          
+          <form className="contact-form" onSubmit={(e) => {}}>
+            <table>
+              <tr>
+              <br />
+              <td><DropdownExampleSelection/></td>
+              <br />
+              <td><TextField
+                id="outlined-basic"
+                placeholder="Fehlerbeschreibung einfügen"
+                label="Fehlerbeschreibung"
+                variant="outlined"
+                //value={this.state.name}
+                //onChange={(e) => this.setState({ name: e.target.value })}
+                required
+                type="text"
+              />
+              </td>
+              <br />
+              <td>
+              <div className="button--container">
+                <button type="submit" className="button button-primary">
+                  Submit
+                </button>
+              </div>
+              </td>
+              </tr>
+            </table> 
+          </form>
+          
         </div>
 
         
