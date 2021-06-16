@@ -2,13 +2,22 @@ import "./customerdashboard.css"
 
 import Table from '@material-ui/core/Table';
 import TableHead from '@material-ui/core/TableHead';
+import TableBody from '@material-ui/core/TableBody';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import Paper from '@material-ui/core/Paper';
+import { makeStyles } from '@material-ui/core/styles';
+
+
 
 function customerdashboard() {
-
+  const useStyles = makeStyles({
+    table: {
+      minWidth: 650,
+    },
+  });
+  // const classes = useStyles();
   const customerData = [
     { 'Kunden_ID': '14', 'Vorname': 'Jan', 'Nachname': 'Bern', 'Adresse': 'Q 7 68161 Mannheim', 'Aktiv': true, 'Beginndatum': 'Datum', 'Enddatum': 'Datum' },
     { 'Kunden_ID': '45564351', 'Vorname': 'Niklas', 'Nachname': 'Müller', 'Adresse': 'Müllerstraße 555 64521 Groß Gerau', 'Aktiv': false, 'Beginndatum': 'Datum', 'Enddatum': 'Datum' },
@@ -31,29 +40,29 @@ function customerdashboard() {
   customerData.forEach(e => {
     console.log(e.Aktiv)
     table_content.push(
-      <tr>
-        <td className="Cell">
+      <TableRow>
+        <TableCell component="th" scope="row">
           {e.Kunden_ID}
-        </td >
-        <td className="Cell"> 
+        </TableCell>
+        <TableCell component="th" scope="row">
           {e.Vorname}
-        </td>
-        <td className="Cell">
+        </TableCell>
+        <TableCell component="th" scope="row">
           {e.Nachname}
-        </td>
-        <td className="Cell">
+        </TableCell>
+        <TableCell component="th" scope="row">
           {e.Adresse}
-        </td>
-        <td className="Cell">
+        </TableCell>
+        <TableCell component="th" scope="row">
           {e.Beginndatum}
-        </td>
-        <td className="Cell">
+        </TableCell>
+        <TableCell component="th" scope="row">
           {e.Enddatum}
-        </td>
-        <td className="Cell">
+        </TableCell>
+        <TableCell component="th" scope="row">
           {e.Aktiv.toString()}
-        </td>
-      </tr>
+        </TableCell>
+      </TableRow>  
     )
   });
   console.log(table_content)
@@ -61,24 +70,27 @@ function customerdashboard() {
     <div width="20vh">
       <br></br>
       <br></br>
-        <TableContainer component={Paper}>
-          <Table background-color="white" aria-label="simple table">
-            <TableHead>
-              <TableRow>
-                <TableCell align="center">Kunden_ID</TableCell>
-                <TableCell align="center">Vorname</TableCell>
-                <TableCell align="center">Nachname</TableCell>
-                <TableCell align="center">Adresse</TableCell>
-                <TableCell align="center">Beginndatum</TableCell>
-                <TableCell align="center">Enddatum</TableCell>
-                <TableCell align="center">Aktiv</TableCell>
-              </TableRow>
-              {table_content}
-            </TableHead>
-          </Table>
-        </TableContainer>
+      <TableContainer component={Paper}>
+        <Table className={useStyles.table} background-color="white" aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell align="center">Kunden_ID</TableCell>
+              <TableCell align="center">Vorname</TableCell>
+              <TableCell align="center">Nachname</TableCell>
+              <TableCell align="center">Adresse</TableCell>
+              <TableCell align="center">Beginndatum</TableCell>
+              <TableCell align="center">Enddatum</TableCell>
+              <TableCell align="center">Aktiv</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {table_content}
+          </TableBody>
+        </Table>
+      </TableContainer>
     </div>
   );
 }
+
 
 export default customerdashboard;
