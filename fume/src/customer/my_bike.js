@@ -52,10 +52,39 @@ function my_bike() {
   ]
 
   const DropdownExampleSelection = () => (
-    <Dropdown
-      placeholder='Fehlerquelle auswählen'
-      options={errorOptions}
-    />
+    // <Dropdown
+    //   placeholder='Fehlerquelle auswählen'
+    //   options={errorOptions}
+    // />
+    <div class="ui fluid selection dropdown">
+      <div class="default text">Fehlerquelle auswählen</div>
+      <div class="menu">
+        <div class="item" data-value="Vorderreifen">
+          Vorderreifen
+        </div>
+        <div class="item" data-value="Frontlicht">
+          Frontlicht
+        </div>
+        <div class="item" data-value="Pedal">
+          Pedal
+        </div>
+        <div class="item" data-value="Lenkrad">
+          Lenkrad
+        </div>
+        <div class="item" data-value="Sattel">
+          Sattel
+        </div>
+        <div class="item" data-value="Schaltung">
+          Schaltung
+        </div>
+        <div class="item" data-value="Rücklicht">
+          Rücklicht
+        </div>
+        <div class="item" data-value="Hinterreifen">
+          Hinterreifen
+        </div>
+      </div>
+    </div>
   )
 
   return (
