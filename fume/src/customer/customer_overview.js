@@ -65,36 +65,42 @@ function customer_overview() {
   });
   console.log(table_content)
   return (
-    <div> 
-      <div width="20vh">
+    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}> 
+
+      <div >
         <br></br>
         <br></br>
-        <TableContainer align="center" component={Paper}>
-          <Table className={useStyles.table} background-color="white" aria-label="simple table">
-            <TableHead>
-              <TableRow style={{ backgroundColor:'#ffd364'}}>
-                <TableCell align="center">Vorname</TableCell>
-                <TableCell align="center">Nachname</TableCell>
-                <TableCell align="center">Alter</TableCell>
-                <TableCell align="center">Adresse</TableCell>
-                <TableCell align="center">Radius</TableCell>
-                <TableCell align="center">Kommunikation</TableCell>
-                <TableCell align="center">Beginndatum</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {table_content}
-            </TableBody>
-          </Table>
-        </TableContainer>
+        <img  src={siegfried} width="400" height="300" alt="Siegfried" style={{borderRadius: '10px', display:'inline-block', float: 'left'}}/>
       </div>
-      <br></br>
-      <br></br>
-      <div>
-        <img  src={siegfried} width="400" height="300" alt="Siegfried" style={{borderRadius: '10px'}}/>
+
+
+      <div width="10px" style={{display:'inline-block', float:'left'}}>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+          <TableContainer align="center" component={Paper}>
+            <Table className={useStyles.table} background-color="white" aria-label="simple table">
+              <TableHead>
+                <TableRow style={{ backgroundColor:'#ffd364'}}>
+                  <TableCell align="center">Vorname</TableCell>
+                  <TableCell align="center">Nachname</TableCell>
+                  <TableCell align="center">Alter</TableCell>
+                  <TableCell align="center">Adresse</TableCell>
+                  <TableCell align="center">Radius</TableCell>
+                  <TableCell align="center">Kommunikation</TableCell>
+                  <TableCell align="center">Beginndatum</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {table_content}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </div>
+
       </div>
-    
-    </div>
   );
 }
 export default customer_overview;
