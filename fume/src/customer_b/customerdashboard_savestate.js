@@ -1,14 +1,6 @@
 import "./customerdashboard.css"
 
-import Table from '@material-ui/core/Table';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import Paper from '@material-ui/core/Paper';
-
 function customerdashboard() {
-
   const customerData = [
     { 'Kunden_ID': '14', 'Vorname': 'Jan', 'Nachname': 'Bern', 'Adresse': 'Q 7 68161 Mannheim', 'Aktiv': true, 'Beginndatum': 'Datum', 'Enddatum': 'Datum' },
     { 'Kunden_ID': '45564351', 'Vorname': 'Niklas', 'Nachname': 'Müller', 'Adresse': 'Müllerstraße 555 64521 Groß Gerau', 'Aktiv': false, 'Beginndatum': 'Datum', 'Enddatum': 'Datum' },
@@ -58,25 +50,28 @@ function customerdashboard() {
   });
   console.log(table_content)
   return (
-    <div width="20vh">
+    <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '25vh'}}>
       <br></br>
-      <br></br>
-        <TableContainer component={Paper}>
-          <Table background-color="white" aria-label="simple table">
-            <TableHead>
-              <TableRow>
-                <TableCell align="center">Kunden_ID</TableCell>
-                <TableCell align="center">Vorname</TableCell>
-                <TableCell align="center">Nachname</TableCell>
-                <TableCell align="center">Adresse</TableCell>
-                <TableCell align="center">Beginndatum</TableCell>
-                <TableCell align="center">Enddatum</TableCell>
-                <TableCell align="center">Aktiv</TableCell>
-              </TableRow>
-              {table_content}
-            </TableHead>
-          </Table>
-        </TableContainer>
+      <table style={{
+        borderCollapse: "separate",
+        backgroundColor: "white",
+        border: "solid black 1px",
+        borderRadius: "6px"
+  }}
+    
+    className="kudentable">
+      <tr>
+        <th className="Cell">Kunden_ID</th>
+        <th className="Cell">Vorname</th>
+        <th className="Cell">Nachname</th>
+        <th className="Cell">Adresse</th>
+        <th className="Cell">Beginndatum</th>
+        <th className="Cell">Enddatum</th>
+        <th className="Cell">Aktiv</th>
+      </tr>
+      {table_content}
+
+    </table>
     </div>
   );
 }
