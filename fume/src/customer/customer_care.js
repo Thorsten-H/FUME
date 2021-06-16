@@ -1,3 +1,4 @@
+import "./customer_care.css"
 import React, { Component }  from 'react';
 import Mail from './../asset/mail.png'
 import Phone from './../asset/phone.png'
@@ -18,28 +19,30 @@ function customer_care() {
     <div>
 
       <div>
-        <tr>
+        <table>
+          <tr>
+              <td>
+                <div>
+                  <img src={Phone} width="96" height="96" alt="Telefonnummer" style={{borderRadius: '10px'}}></img>
+                </div>
+              </td>
+              <td>
+              1234567890
+              </td>
+          </tr>
+          <tr>
             <td>
               <div>
-                <img src={Phone} width="96" height="96" alt="Telefonnummer" style={{borderRadius: '10px'}}></img>
+                <img src={Mail} width="96" height="96" alt="E-Mail-Adresse" style={{borderRadius: '10px'}}></img>
               </div>
             </td>
             <td>
-            1234567890
+              beispiel@email.com
             </td>
-        </tr>
-        <tr>
-          <td>
-            <div>
-              <img src={Mail} width="96" height="96" alt="E-Mail-Adresse" style={{borderRadius: '10px'}}></img>
-            </div>
-          </td>
-          <td>
-            beispiel@email.com
-          </td>
-        </tr>
+          </tr>
+        </table>  
       </div>
-
+      
     <div>
       <h2>
         Kontaktformular

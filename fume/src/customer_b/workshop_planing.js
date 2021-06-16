@@ -94,7 +94,7 @@ function Workshop_planing() {
     tmp_jahr = jahr
     index = tagesliste.indexOf(wochentag)
 
-    if (index < 7) {
+    if (index < 6) {
       index += 1
     }
     else {

@@ -1,3 +1,4 @@
+import "./my_bike.css"
 import React, { Component }  from 'react';
 import bike from './../asset/bike_fume.png'
 import { Dropdown } from 'semantic-ui-react'
