@@ -3,7 +3,7 @@ import React, { Component }  from 'react';
 import bike from './../asset/bike_fume.png'
 import { Dropdown } from 'semantic-ui-react'
 import { TextField } from '@material-ui/core';
-
+import Button from '@material-ui/core/Button';
 
 function my_bike() {
 
@@ -52,39 +52,10 @@ function my_bike() {
   ]
 
   const DropdownExampleSelection = () => (
-    // <Dropdown
-    //   placeholder='Fehlerquelle auswählen'
-    //   options={errorOptions}
-    // />
-    <div class="ui fluid selection dropdown">
-      <div class="default text">Fehlerquelle auswählen</div>
-      <div class="menu">
-        <div class="item" data-value="Vorderreifen">
-          Vorderreifen
-        </div>
-        <div class="item" data-value="Frontlicht">
-          Frontlicht
-        </div>
-        <div class="item" data-value="Pedal">
-          Pedal
-        </div>
-        <div class="item" data-value="Lenkrad">
-          Lenkrad
-        </div>
-        <div class="item" data-value="Sattel">
-          Sattel
-        </div>
-        <div class="item" data-value="Schaltung">
-          Schaltung
-        </div>
-        <div class="item" data-value="Rücklicht">
-          Rücklicht
-        </div>
-        <div class="item" data-value="Hinterreifen">
-          Hinterreifen
-        </div>
-      </div>
-    </div>
+     <Dropdown
+       placeholder='Fehlerquelle auswählen'
+       options={errorOptions}
+     />
   )
 
   return (
@@ -94,7 +65,7 @@ function my_bike() {
 
       <h1>Fahrradübersicht</h1>
       <div >
-        <img usemap="#bike" src={bike} width="735" height="439" alt="Fahrrad" style={{borderRadius: '10px'}} ></img>
+        <img usemap="#bike" src={bike} width="735" height="439" alt="Fahrrad" style={{borderRadius: '10px'}}/>
         <map name ="bike">
           <area id = "Vorderreifen" shape="rect" coords="57,325,251,376"  alt="Vorderreifen"></area>
           <area id = "Frontlicht" shape="rect" coords="21,144,178,195"  alt="Vorderlicht"></area>
@@ -108,14 +79,13 @@ function my_bike() {
 
       </div>        
 
-      <div >
-        <div style={{backgroundColor: "white", borderRadius: '10px', width: '40%'}}>
-          <h2>
-            Fehlermeldung anlegen
-          </h2>
-          
+      <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
 
-          
+        <div style={{backgroundColor: "white", borderRadius: '10px', width: '800px', display: 'flex',  justifyContent:'center', alignItems:'center'}}>
+         <h2>
+          Fehlermeldung anlegen
+        </h2>         
+          <div>
           <form className="contact-form" onSubmit={(e) => {}}>
             <table>
               <tr>
@@ -127,6 +97,7 @@ function my_bike() {
                 placeholder="Fehlerbeschreibung einfügen"
                 label="Fehlerbeschreibung"
                 variant="outlined"
+                style={{ border: '1px solid #ffd364', width:'300px' }}
                 //value={this.state.name}
                 //onChange={(e) => this.setState({ name: e.target.value })}
                 required
@@ -136,15 +107,15 @@ function my_bike() {
               <br />
               <td>
               <div className="button--container">
-                <button type="submit" className="button button-primary">
+                <Button style={{ width:'50px', backgroundColor: "#ffd364", color:"black"}} variant="contained" color="primary">
                   Submit
-                </button>
+                </Button>
               </div>
               </td>
               </tr>
             </table> 
           </form>
-          
+          </div>
         </div>
 
         
