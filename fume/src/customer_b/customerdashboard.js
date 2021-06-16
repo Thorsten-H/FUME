@@ -72,7 +72,7 @@ function customerdashboard() {
       <TableContainer align="center" component={Paper}>
         <Table className={useStyles.table} background-color="white" aria-label="simple table">
           <TableHead>
-            <TableRow>
+            <TableRow style={{ backgroundColor:'#ffd364'}}>
               <TableCell align="center">Kunden_ID</TableCell>
               <TableCell align="center">Vorname</TableCell>
               <TableCell align="center">Nachname</TableCell>
