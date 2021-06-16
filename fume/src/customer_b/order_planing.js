@@ -1,11 +1,20 @@
-import React, { Component }  from 'react';
+import React, { Component } from 'react';
+
+import Table from '@material-ui/core/Table';
+import TableHead from '@material-ui/core/TableHead';
+import TableBody from '@material-ui/core/TableBody';
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import Paper from '@material-ui/core/Paper';
+import { makeStyles } from '@material-ui/core/styles';
 
 function order_planing() {
   const customerData = [
-    { 'Kunden_ID': '14', 'Vorname': 'Jan', 'Nachname': 'Bern', 'Adresse': 'Q 7 68161 Mannheim', 'Aktiv': true, 'Beginndatum': 'Datum', 'Enddatum': 'Datum','Bike_ID': 1248},
-    { 'Kunden_ID': '45564351', 'Vorname': 'Niklas', 'Nachname': 'Müller', 'Adresse': 'Müllerstraße 555 64521 Groß Gerau', 'Aktiv': false, 'Beginndatum': 'Datum', 'Enddatum': 'Datum','Bike_ID': 0, },
-    { 'Kunden_ID': '12345', 'Vorname': 'Simon', 'Nachname': 'Stein', 'Adresse': 'Q 8 68161 Mannheim', 'Aktiv': true, 'Beginndatum': 'Datum', 'Enddatum': 'Datum', 'Bike_ID': 9756},
-    { 'Kunden_ID': '55', 'Vorname': 'Andres', 'Nachname': 'Gärtner', 'Adresse': 'Zeil 155 64135 Frankfurt', 'Aktiv': true, 'Beginndatum': 'Datum', 'Enddatum': 'Datum' ,'Bike_ID': 9762},
+    { 'Kunden_ID': '14', 'Vorname': 'Jan', 'Nachname': 'Bern', 'Adresse': 'Q 7 68161 Mannheim', 'Aktiv': true, 'Beginndatum': 'Datum', 'Enddatum': 'Datum', 'Bike_ID': 1248 },
+    { 'Kunden_ID': '45564351', 'Vorname': 'Niklas', 'Nachname': 'Müller', 'Adresse': 'Müllerstraße 555 64521 Groß Gerau', 'Aktiv': false, 'Beginndatum': 'Datum', 'Enddatum': 'Datum', 'Bike_ID': 0, },
+    { 'Kunden_ID': '12345', 'Vorname': 'Simon', 'Nachname': 'Stein', 'Adresse': 'Q 8 68161 Mannheim', 'Aktiv': true, 'Beginndatum': 'Datum', 'Enddatum': 'Datum', 'Bike_ID': 9756 },
+    { 'Kunden_ID': '55', 'Vorname': 'Andres', 'Nachname': 'Gärtner', 'Adresse': 'Zeil 155 64135 Frankfurt', 'Aktiv': true, 'Beginndatum': 'Datum', 'Enddatum': 'Datum', 'Bike_ID': 9762 },
     { 'Kunden_ID': '2345310', 'Vorname': 'Thorsten', 'Nachname': 'Becker', 'Adresse': 'Bäckerstraße 3 63215 Darmstadt', 'Aktiv': false, 'Beginndatum': 'Datum', 'Enddatum': 'Datum', 'Bike_ID': 1255 }
   ]
 
@@ -47,61 +56,68 @@ function order_planing() {
     }
   ]
 
-const mergedList = reparatur_daten.map(t1 => ({...t1, ...customerData.find(t2 => t2.Bike_ID === t1.Bike_ID)}))
+  const mergedList = reparatur_daten.map(t1 => ({ ...t1, ...customerData.find(t2 => t2.Bike_ID === t1.Bike_ID) }))
 
+  const useStyles = makeStyles({
+    table: {
+      minWidth: 650,
+    },
+  });
 
   let table_content = []
 
   mergedList.forEach(e => {
     table_content.push(
-      <tr>
-        <td className="Cell">
+      <TableRow>
+        <TableCell component="th" scope="row">
           {e.Kunden_ID}
-        </td >
-        <td className="Cell"> 
+        </TableCell>
+        <TableCell component="th" scope="row">
           {e.Nachname}
-        </td>
-        <td className="Cell">
+        </TableCell>
+        <TableCell component="th" scope="row">
           {e.Bike_ID}
-        </td>
-        <td className="Cell">
+        </TableCell>
+        <TableCell component="th" scope="row">
           {e.BikeService_ID}
-        </td>
-        <td className="Cell">
+        </TableCell>
+        <TableCell component="th" scope="row">
           {e.Serviceart}
-        </td>
-        <td className="Cell">
+        </TableCell>
+        <TableCell component="th" scope="row">
           {e.Erstellungsdatum}
-        </td>
-        <td className="Cell">
+        </TableCell>
+        <TableCell component="th" scope="row">
           {e.Bearbeitungsdatum}
-        </td>
-      </tr>
+        </TableCell>
+      </TableRow>
     )
   });
 
   return (
-    <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '25vh'}}>
+    <div 
+    // style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '25vh' }}
+    >
       <br></br>
-      <table style={{
-        borderCollapse: "separate",
-        backgroundColor: "white",
-        border: "solid black 1px",
-        borderRadius: "6px"
-  }}
-    
-    className="kudentable">
-      <tr>
-        <th className="Cell">Kunden_ID</th>
-        <th className="Cell">Nachname</th>
-        <th className="Cell">Bike_ID</th>
-        <th className="Cell">BikeService_ID</th>
-        <th className="Cell">Serviceart</th>
-        <th className="Cell">Erstellungsdatum</th>
-        <th className="Cell">Bearbeitungsdatum</th>
-      </tr>
-      {table_content}
-    </table>
+      <br></br>
+      <TableContainer component={Paper}>
+        <Table className={useStyles.table} background-color="white" aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell align="center">Kunden_ID</TableCell>
+              <TableCell align="center">Nachname</TableCell>
+              <TableCell align="center">Bike_ID</TableCell>
+              <TableCell align="center">BikeService_ID</TableCell>
+              <TableCell align="center">Serviceart</TableCell>
+              <TableCell align="center">Erstellungsdatum</TableCell>
+              <TableCell align="center">Bearbeitungsdatum</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {table_content}
+          </TableBody>
+        </Table>
+      </TableContainer>
     </div>
   );
 }
