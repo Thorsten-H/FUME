@@ -40,25 +40,25 @@ function customerdashboard() {
     console.log(e.Aktiv)
     table_content.push(
       <TableRow>
-        <TableCell component="th" scope="row">
+        <TableCell align="center" component="th" scope="row">
           {e.Kunden_ID}
         </TableCell>
-        <TableCell component="th" scope="row">
+        <TableCell align="center" component="th" scope="row">
           {e.Vorname}
         </TableCell>
-        <TableCell component="th" scope="row">
+        <TableCell align="center" component="th" scope="row">
           {e.Nachname}
         </TableCell>
-        <TableCell component="th" scope="row">
+        <TableCell align="center" component="th" scope="row">
           {e.Adresse}
         </TableCell>
-        <TableCell component="th" scope="row">
+        <TableCell align="center" component="th" scope="row">
           {e.Beginndatum}
         </TableCell>
-        <TableCell component="th" scope="row">
+        <TableCell align="center" component="th" scope="row">
           {e.Enddatum}
         </TableCell>
-        <TableCell component="th" scope="row">
+        <TableCell align="center" component="th" scope="row">
           {e.Aktiv.toString()}
         </TableCell>
       </TableRow>  
@@ -69,7 +69,7 @@ function customerdashboard() {
     <div width="20vh">
       <br></br>
       <br></br>
-      <TableContainer component={Paper}>
+      <TableContainer align="center" component={Paper}>
         <Table className={useStyles.table} background-color="white" aria-label="simple table">
           <TableHead>
             <TableRow>

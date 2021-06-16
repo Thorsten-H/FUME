@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { component } from 'react';
 
 import Table from '@material-ui/core/Table';
 import TableHead from '@material-ui/core/TableHead';
@@ -69,25 +69,25 @@ function order_planing() {
   mergedList.forEach(e => {
     table_content.push(
       <TableRow>
-        <TableCell component="th" scope="row">
+        <TableCell align="center" component="th" scope="row">
           {e.Kunden_ID}
         </TableCell>
-        <TableCell component="th" scope="row">
+        <TableCell align="center" component="th" scope="row">
           {e.Nachname}
         </TableCell>
-        <TableCell component="th" scope="row">
+        <TableCell align="center" component="th" scope="row">
           {e.Bike_ID}
         </TableCell>
-        <TableCell component="th" scope="row">
+        <TableCell align="center" component="th" scope="row">
           {e.BikeService_ID}
         </TableCell>
-        <TableCell component="th" scope="row">
+        <TableCell align="center" component="th" scope="row">
           {e.Serviceart}
         </TableCell>
-        <TableCell component="th" scope="row">
+        <TableCell align="center" component="th" scope="row">
           {e.Erstellungsdatum}
         </TableCell>
-        <TableCell component="th" scope="row">
+        <TableCell align="center" component="th" scope="row">
           {e.Bearbeitungsdatum}
         </TableCell>
       </TableRow>
@@ -100,7 +100,7 @@ function order_planing() {
     >
       <br></br>
       <br></br>
-      <TableContainer component={Paper}>
+      <TableContainer align="center" component={Paper}>
         <Table className={useStyles.table} background-color="white" aria-label="simple table">
           <TableHead>
             <TableRow>
