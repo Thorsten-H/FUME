@@ -1,64 +1,25 @@
 import "./my_bike.css"
-import React, { Component }  from 'react';
+import React, { useState }  from 'react';
 import bike from './../asset/bike_fume.png'
-import { Dropdown } from 'semantic-ui-react'
+import { Select, MenuItem, FormControl,InputLabel,makeStyles } from "@material-ui/core";
 import { TextField } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
+import { mergeClasses } from "@material-ui/styles";
+
+
 
 function my_bike() {
 
-  const errorOptions = [
-    {
-      key: 'Vorderreifen',
-      text: 'Vorderreifen',
-      value: 'Vorderreifen'
-    },
-    {
-      key: 'Frontlicht',
-      text: 'Frontlicht',
-      value: 'Frontlicht'
-    },
-    {
-      key: 'Pedal',
-      text: 'Pedal',
-      value: 'Pedal'
-    },
-    {
-      key: 'Lenkrad',
-      text: 'Lenkrad',
-      value: 'Lenkrad'
-    },
-    {
-      key: 'Sattel',
-      text: 'Sattel',
-      value: 'Sattel'
-    },
-    {
-      key: 'Schaltung',
-      text: 'Schaltung',
-      value: 'Schaltung'
-    },
-    {
-      key: 'Rücklicht',
-      text: 'Rücklicht',
-      value: 'Rücklicht'
-    },
-    {
-      key: 'Hinterreifen',
-      text: 'Hinterreifen',
-      value: 'Hinterreifen'
-    },
+  // const useStyles = makeStyles(theme => ({  
+  // formControl: {
+  //   minWidth: 100
+  //   }
+  // }))
 
-  ]
+  //const classes = useStyles();
+  const [value, setValue] = ""
 
-  const DropdownExampleSelection = () => (
-     <Dropdown
-       placeholder='Fehlerquelle auswählen'
-       fluid
-       selection
-       options={errorOptions}
-     />
-  )
+  const handleChange = e => setValue(e.target.value)
 
   return (
 
@@ -92,7 +53,21 @@ function my_bike() {
             <table>
               <tr>
               <br />
-              <td><DropdownExampleSelection/></td>
+              <td>
+                <FormControl className={mergeClasses.formControl} style={{width:"150px"}}>
+                  <InputLabel>Fehlerquelle</InputLabel>
+                  <Select >
+                    <MenuItem value={"Vorderreifen"}>Vorderreifen</MenuItem>
+                    <MenuItem value={"Frontlicht"}>Frontlicht</MenuItem>
+                    <MenuItem value={"Pedal"}>Pedal</MenuItem>
+                    <MenuItem value={"Lenkrad"}>Lenkrad</MenuItem>
+                    <MenuItem value={"Sattel"}>Sattel</MenuItem>
+                    <MenuItem value={"Schaltung"}>Schaltung</MenuItem>
+                    <MenuItem value={"Rücklicht"}>Rücklicht</MenuItem>
+                    <MenuItem value={"Hinterreifen"}>Hinterreifen</MenuItem>
+                  </Select>
+                 </FormControl>
+                </td>
               <br />
               <td><TextField
                 id="outlined-basic"
