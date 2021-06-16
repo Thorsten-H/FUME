@@ -1,6 +1,6 @@
 import React, { Component }  from 'react';
-import {Mail} from './../asset/mail.png'
-import {Phone} from './../asset/phone.png'
+import Mail from './../asset/mail.png'
+import Phone from './../asset/phone.png'
 import { TextField } from '@material-ui/core';
 
 function customer_care() {
@@ -17,12 +17,28 @@ function customer_care() {
   return (
     <div>
 
-    <div>
-      <tr>
-
-      </tr>
-    </div>
-
+      <div>
+        <tr>
+            <td>
+              <div>
+                <img src={Phone} width="96" height="96" alt="Telefonnummer" style={{borderRadius: '10px'}}></img>
+              </div>
+            </td>
+            <td>
+            1234567890
+            </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <img src={Mail} width="96" height="96" alt="E-Mail-Adresse" style={{borderRadius: '10px'}}></img>
+            </div>
+          </td>
+          <td>
+            beispiel@email.com
+          </td>
+        </tr>
+      </div>
 
     <div>
       <h2>
@@ -81,7 +97,7 @@ function customer_care() {
       placeholder="Enter Message"
       variant="outlined"
       multiline
-      rowsMax={4}
+      rowsMax={8}
       //value={this.state.message}
       //onChange={(e) => this.setState({ message: e.target.value })}
       required
