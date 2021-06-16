@@ -179,7 +179,7 @@ function Workshop_planing() {
     
     let reparatur_list = []
     reparatur_list.push(
-      <div class = "flex-container">
+      <div class = "flex-container" style={{ backgroundColor:'#ffd364', borderRadius:'5px', width:'80vh'}}>
         <div>
             ID
           </div>
@@ -197,7 +197,8 @@ function Workshop_planing() {
       if (element.Bearbeitungsdatum === tmp_datum) {
 
         reparatur_list.push(
-          <div class = "flex-container">
+          
+          <div class = "flex-container" style={{ backgroundColor:'#ffd364', borderRadius:'5px', width:'80vh'}}>
               <div>
                 {element.BikeService_ID}
               </div>
@@ -245,6 +246,7 @@ function Workshop_planing() {
         >
 
           <XAxis type = "number"/>
+
           <YAxis dataKey="label" type = "category"/>
           <Tooltip />
           <Legend />
@@ -294,7 +296,7 @@ function Workshop_planing() {
         </h2>
         <br/>
 
-        <div class = "flex-container">
+        <div class = "flex-container" style={{ backgroundColor:'#ffd364', padding:'right'}}>
 
           <IconButton onClick = {() => date_back()}>
 
@@ -319,7 +321,7 @@ function Workshop_planing() {
         </div>
         <br/>
 
-        <div class = "flex-container-col" style={{ backgroundColor:'#ffd364'}}>
+        <div class = "flex-container-col">
           {reparatur_liste_voll}
         </div>
 
