@@ -59,7 +59,7 @@ function customerdashboard() {
         borderRadius: "6px"
   }}
     
-    className="kudentable">
+    className="kundentable">
       <tr>
         <th className="Cell">Kunden_ID</th>
         <th className="Cell">Vorname</th>
