@@ -5,6 +5,7 @@ import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 
 import siegfried from './../asset/Siegfried2.png'
@@ -74,7 +75,7 @@ function customer_overview() {
       </div>
 
 
-      <div width="10px" style={{display:'inline-block', float:'left'}}>
+      <div width="10px" style={{display:'inline-block', float:'left', textAlign:"right"}}>
         <br></br>
         <br></br>
         <br></br>
@@ -98,6 +99,9 @@ function customer_overview() {
               </TableBody>
             </Table>
           </TableContainer>
+          <Button style={{ width:'100px', backgroundColor: "red", color:"black", margin:"10px"}} variant="contained" color="primary">
+                  kündigen
+                </Button>
         </div>
 
       </div>
