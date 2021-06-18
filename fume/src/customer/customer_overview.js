@@ -99,7 +99,10 @@ function customer_overview() {
               </TableBody>
             </Table>
           </TableContainer>
-          <Button style={{ width:'100px', backgroundColor: "red", color:"black", margin:"10px"}} variant="contained" color="primary">
+          <Button style={{ width:'150px', height:"50px", backgroundColor: "red", color:"black", margin:"10px"}} variant="contained" color="primary">
+                  Abo pausieren
+                </Button>
+          <Button style={{ width:'150px', height:"50px", backgroundColor: "red", color:"black", margin:"10px"}} variant="contained" color="primary">
                   kündigen
                 </Button>
         </div>
