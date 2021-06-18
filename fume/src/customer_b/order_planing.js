@@ -11,10 +11,10 @@ import { makeStyles } from '@material-ui/core/styles';
 
 function order_planing() {
   const customerData = [
-    { 'Kunden_ID': '14', 'Vorname': 'Jan', 'Nachname': 'Bern', 'Adresse': 'Q 7 68161 Mannheim', 'Aktiv': true, 'Beginndatum': '01.01.2020', 'Enddatum': '', 'Bike_ID': 1248 },
-    { 'Kunden_ID': '45564351', 'Vorname': 'Niklas', 'Nachname': 'Müller', 'Adresse': 'Müllerstraße 555 64521 Groß Gerau', 'Aktiv': false, 'Beginndatum': '01.01.2020', 'Enddatum': 'Datum', 'Bike_ID': 0, },
-    { 'Kunden_ID': '12345', 'Vorname': 'Simon', 'Nachname': 'Stein', 'Adresse': 'Q 8 68161 Mannheim', 'Aktiv': true, 'Beginndatum': 'Datum', '01.01.2020': '', 'Bike_ID': 9756 },
-    { 'Kunden_ID': '55', 'Vorname': 'Andres', 'Nachname': 'Gärtner', 'Adresse': 'Zeil 155 64135 Frankfurt', 'Aktiv': true, 'Beginndatum': '01.01.2020', 'Enddatum': '', 'Bike_ID': 9762 },
+    { 'Kunden_ID': '14', 'Vorname': 'Jan', 'Nachname': 'Bern', 'Adresse': 'Q 7 68161 Mannheim', 'Aktiv': true, 'Beginndatum': '01.01.2020', 'Enddatum': '-', 'Bike_ID': 1248 },
+    { 'Kunden_ID': '45564351', 'Vorname': 'Niklas', 'Nachname': 'Müller', 'Adresse': 'Müllerstraße 555 64521 Groß Gerau', 'Aktiv': false, 'Beginndatum': '01.01.2020', 'Enddatum': '01.01.2021', 'Bike_ID': 0, },
+    { 'Kunden_ID': '12345', 'Vorname': 'Simon', 'Nachname': 'Stein', 'Adresse': 'Q 8 68161 Mannheim', 'Aktiv': true, 'Beginndatum': '01.01.2020', 'Enddatum': '-', 'Bike_ID': 9756 },
+    { 'Kunden_ID': '55', 'Vorname': 'Andres', 'Nachname': 'Gärtner', 'Adresse': 'Zeil 155 64135 Frankfurt', 'Aktiv': true, 'Beginndatum': '01.01.2020', 'Enddatum': '-', 'Bike_ID': 9762 },
     { 'Kunden_ID': '2345310', 'Vorname': 'Thorsten', 'Nachname': 'Becker', 'Adresse': 'Bäckerstraße 3 63215 Darmstadt', 'Aktiv': false, 'Beginndatum': '01.01.2020', 'Enddatum': '01.01.2021', 'Bike_ID': 1255 }
   ]
 
