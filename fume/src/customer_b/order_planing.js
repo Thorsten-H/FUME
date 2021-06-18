@@ -35,21 +35,21 @@ function order_planing() {
     },
     {
       'BikeService_ID': 3,
-      'Serviceart': "Sessel austauschen",
+      'Serviceart': "Sattel austauschen",
       'Bike_ID': 9756,
       'Erstellungsdatum': "11.6.2021",
       'Bearbeitungsdatum': "15.6.2021"
     },
     {
       'BikeService_ID': 4,
-      'Serviceart': "Sessel einstellen",
+      'Serviceart': "Sattel einstellen",
       'Bike_ID': 9756,
       'Erstellungsdatum': "11.6.2021",
       'Bearbeitungsdatum': "15.6.2021"
     },
     {
       'BikeService_ID': 5,
-      'Serviceart': "Sessel austauschen",
+      'Serviceart': "Sattel austauschen",
       'Bike_ID': 9762,
       'Erstellungsdatum': "11.6.2021",
       'Bearbeitungsdatum': "17.6.2021"
