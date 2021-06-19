@@ -89,6 +89,7 @@ function my_bike() {
                   </Select>
                  </FormControl>
                 </td>
+                <br />
               <InputBase
                 id="outlined-basic" 
                 placeholder="Fehlerbeschreibung" 
