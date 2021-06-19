@@ -18,7 +18,7 @@ function find_bike() {
 
   return (
 
-    <div><div id='mapid'>
+    <div id='mapid'>
       <MapContainer center={bike_position} zoom={15} scrollWheelZoom={false}>
         <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -30,7 +30,7 @@ function find_bike() {
             </Popup>
           </Marker>
       </MapContainer>
-    </div></div>);
+    </div>);
 }
 
 export default find_bike;
