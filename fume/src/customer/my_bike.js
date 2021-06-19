@@ -2,7 +2,7 @@ import "./my_bike.css"
 import React, { useState }  from 'react';
 import bike from './../asset/bike_fume.png'
 import { Select, MenuItem, FormControl,InputLabel, makeStyles } from "@material-ui/core";
-import { TextField, InputBase } from '@material-ui/core';
+import { TextField} from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import { mergeClasses } from "@material-ui/styles";
 
@@ -22,24 +22,7 @@ function my_bike() {
   const handleChange = e => setValue(e.target.value)
 
 
-  const UseStyles = makeStyles((theme) => ({
-    root: {
-      '& > *': {
-        margin: theme.spacing(1),
-        width: '25ch',
-      },   
-    },
-  
-    inputBase:{
-      border: '1px solid #ffd364',
-      borderRadius: theme.shape.borderRadius,
-      height: "6vh",
-      //width: '500px',
-      padding: theme.spacing(2)
-    }
-  }));
 
-  const classes = UseStyles();
 
 
   return (
@@ -89,17 +72,8 @@ function my_bike() {
                   </Select>
                  </FormControl>
                 </td>
-                <br />
-              <InputBase
-                id="outlined-basic" 
-                placeholder="Fehlerbeschreibung" 
-                variant="outlined" 
-                className={classes.inputBase}
-                required
-                multiline
-                rowsMax={8}
-              />
-              {/* <td><TextField
+
+              <td><TextField
                 id="outlined-basic"
                 placeholder="Fehlerbeschreibung einfügen"
                 label="Fehlerbeschreibung"
@@ -110,7 +84,7 @@ function my_bike() {
                 required
                 type="text"
               />
-              </td> */}
+              </td>
               <br />
               <td>
               <div className="button--container">
