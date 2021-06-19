@@ -2,11 +2,32 @@ import "./customer_care.css"
 import React, { Component }  from 'react';
 import Mail from './../asset/mail.png'
 import Phone from './../asset/phone.png'
-import { TextField } from '@material-ui/core';
+import { TextField, InputBase, makeStyles } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 
 function customer_care() {
   
+
+  const UseStyles = makeStyles((theme) => ({
+    root: {
+      '& > *': {
+        margin: theme.spacing(1),
+        width: '25ch',
+      },   
+    },
+  
+    inputBase:{
+      border: '1px solid #ffd364',
+      borderRadius: theme.shape.borderRadius,
+      height: "7vh",
+      width: '500px',
+      padding: theme.spacing(2)
+    }
+  }));
+
+  const classes = UseStyles();
+
+
   // data = {
   //   name: "",
   //   message: "",
@@ -50,16 +71,75 @@ function customer_care() {
         </table>  
       </div>
     
-      <form className="contact-form" onSubmit={(e) => {}}>
+      <form className={classes.root} noValidate autoComplete="off" onSubmit={(e) => {}}>
         <br />
         <br />
+
+        <InputBase
+          id="outlined-basic" 
+          placeholder="*Name" 
+          variant="outlined" 
+          className={classes.inputBase}
+          required
+        />
         <br />
-        <TextField
+        <br />
+
+        <InputBase
+          id="outlined-basic" 
+          placeholder="*Email" 
+          variant="outlined" 
+          className={classes.inputBase}
+          required
+        />
+        <br />
+        <br />
+
+        <InputBase
+          id="outlined-basic" 
+          placeholder="*Subject" 
+          variant="outlined" 
+          className={classes.inputBase}
+          required
+        />
+        <br />
+        <br />
+
+        <InputBase
+          id="outlined-basic" 
+          placeholder="*Message" 
+          variant="outlined" 
+          className={classes.inputBase}
+          required
+          multiline
+          rowsMax={8}
+        />   
+
+        <br/>
+        <br/>
+        
+        <Button style={{ width:'500px', backgroundColor: "#ffd364", color:"black", margin:"center"}} variant="contained" color="primary">
+          Submit
+        </Button>
+
+    </form>  
+  </div>
+  )
+}
+
+export default customer_care;
+
+
+
+
+
+
+ {/* <TextField
           id="outlined-basic"
           placeholder="Enter your name"
           label="Name"
           variant="outlined"
-          style={{ border: '1px solid #ffd364', width:'500px'}}
+          style={{ border: '1px solid #ffd364', width:'500px', borderRadius:'5px'}}
           //value={this.state.name}
           //onChange={(e) => this.setState({ name: e.target.value })}
           required
@@ -67,14 +147,14 @@ function customer_care() {
         />
         <br />
         <br />
-        <br />
+        <br /> */}
 
-        <TextField
+        {/* <TextField
           id="outlined-basic"
           label="Email"
           placeholder="Enter email address"
           variant="outlined"
-          style={{ border: '1px solid #ffd364', width:'500px'}}
+          style={{ border: '1px solid #ffd364', width:'500px', borderRadius:'5px'}}
           //value={this.state.email}
           //onChange={(e) => this.handleChangeEmail(e)}
           //error={this.state.emailError}
@@ -89,7 +169,7 @@ function customer_care() {
           placeholder="Enter Subject"
           label="Subject"
           variant="outlined"
-          style={{ border: '1px solid #ffd364', width:'500px'}}
+          style={{ border: '1px solid #ffd364', width:'500px', borderRadius:'5px'}}
           //value={this.state.subject}
           //onChange={(e) => this.setState({ subject: e.target.value })}
           required
@@ -105,7 +185,7 @@ function customer_care() {
           variant="outlined"
           multiline
           rowsMax={8}
-          style={{ border: '1px solid #ffd364', width:'500px'}}
+          style={{ border: '1px solid #ffd364', width:'500px', borderRadius:'5px'}}
           //value={this.state.message}
           //onChange={(e) => this.setState({ message: e.target.value })}
           required
@@ -113,16 +193,4 @@ function customer_care() {
         />
         <br />
         <br />
-        <br />
-
-        <div className="button--container">
-          <Button style={{ width:'500px', backgroundColor: "#ffd364", color:"black"}} variant="contained" color="primary">
-          Submit
-          </Button>
-      </div>
-    </form>  
-  </div>
-  )
-}
-
-export default customer_care;
+        <br /> */}
