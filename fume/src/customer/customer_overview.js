@@ -65,7 +65,7 @@ function customer_overview() {
                                                                                                    borderStyle: 'solid', 
                                                                                                    borderColor: '#ffffff', 
                                                                                                    backgroundColor: '#ffffff',
-                                                                                                   marginTop: '10em' 
+                                                                                                   marginTop: '12%' 
                                                                                                     }} />
              
               <br />
