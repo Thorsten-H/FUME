@@ -65,7 +65,7 @@ function customer_overview() {
                                                                                                    borderStyle: 'solid', 
                                                                                                    borderColor: '#ffffff', 
                                                                                                    backgroundColor: '#ffffff',
-                                                                                                   marginTop: '12%' 
+                                                                                                   marginTop: '8%' 
                                                                                                     }} />
              
               <br />
@@ -103,9 +103,9 @@ function customer_overview() {
         <tr>
           <td>
             <div>
-            <Button style={{ width:'150px', height:"50px", backgroundColor: "#ffd364", color:"black", margin:"10px"}} variant="contained" color="primary">
+            {/* <Button style={{ width:'150px', height:"50px", backgroundColor: "#ffd364", color:"black", margin:"10px"}} variant="contained" color="primary">
                 Kontaktdaten ändern
-            </Button>
+            </Button> */}
             <Button style={{ width:'150px', height:"50px", backgroundColor: "red", color:"black", margin:"10px"}} variant="contained" color="primary">
                       Abo pausieren
             </Button>
