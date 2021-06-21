@@ -7,6 +7,14 @@ import Button from '@material-ui/core/Button';
 
 function customer_care() {
   
+  function clearData()
+  {  
+  document.getElementById('name').value = "";
+  document.getElementById('email').value = "";
+  document.getElementById('subject').value = "";
+  document.getElementById('message').value = "";
+  }
+
 
   const UseStyles = makeStyles((theme) => ({
     root: {
@@ -76,7 +84,7 @@ function customer_care() {
         <br />
 
         <InputBase
-          id="outlined-basic" 
+          id="name" 
           placeholder="*Name" 
           variant="outlined" 
           className={classes.inputBase}
@@ -86,7 +94,7 @@ function customer_care() {
         <br />
 
         <InputBase
-          id="outlined-basic" 
+          id="email" 
           placeholder="*Email" 
           variant="outlined" 
           className={classes.inputBase}
@@ -96,7 +104,7 @@ function customer_care() {
         <br />
 
         <InputBase
-          id="outlined-basic" 
+          id="subject" 
           placeholder="*Subject" 
           variant="outlined" 
           className={classes.inputBase}
@@ -106,7 +114,7 @@ function customer_care() {
         <br />
 
         <InputBase
-          id="outlined-basic" 
+          id="message" 
           placeholder="*Message" 
           variant="outlined" 
           className={classes.inputBase}
@@ -118,7 +126,7 @@ function customer_care() {
         <br/>
         <br/>
         
-        <Button style={{ width:'500px', backgroundColor: "#ffd364", color:"black", margin:"center"}} variant="contained" color="primary">
+        <Button onClick = {clearData} style={{ width:'500px', backgroundColor: "#ffd364", color:"black", margin:"center"}} variant="contained" color="primary">
           Submit
         </Button>
 
