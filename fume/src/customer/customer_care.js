@@ -15,7 +15,6 @@ function customer_care() {
   document.getElementById('message').value = "";
   }
 
-
   const UseStyles = makeStyles((theme) => ({
     root: {
       '& > *': {
@@ -35,16 +34,6 @@ function customer_care() {
 
   const classes = UseStyles();
 
-
-  // data = {
-  //   name: "",
-  //   message: "",
-  //   email: "",
-  //   subject: "",
-  //   sent: false,
-  //   buttonText: "Send Message",
-  //   emailError: false,
-  // };
   return (
     <div>
       <br></br>
@@ -78,7 +67,7 @@ function customer_care() {
           </tr>
         </table>  
       </div>
-    
+
       <form className={classes.root} noValidate autoComplete="off" onSubmit={(e) => {}}>
         <br />
         <br />
@@ -122,7 +111,6 @@ function customer_care() {
           multiline
           rowsMax={8}
         />   
-
         <br/>
         <br/>
         
