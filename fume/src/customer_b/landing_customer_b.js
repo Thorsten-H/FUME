@@ -1,9 +1,9 @@
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import { Route, Link, Switch } from "react-router-dom";
 import Salesdashboard from "./salesdashboard"
 import Customerdashboard from "./customerdashboard"
 import Workshop_planing from "./workshop_planing"
 import Order_planing from "./order_planing"
-import React, { Component }  from 'react';
+import React from 'react';
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import logo from './../FUME_logo.png'

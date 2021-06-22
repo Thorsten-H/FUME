@@ -1,6 +1,6 @@
 import { BarChart, Bar, Pie, PieChart, XAxis, YAxis, RadarChart, PolarGrid, 
   PolarAngleAxis, PolarRadiusAxis, Radar, Tooltip, LineChart, Legend, 
-  ResponsiveContainer, Line, Cell } from 'recharts';
+  Line, Cell } from 'recharts';
 
 import "./salesdashboard.css"
 
