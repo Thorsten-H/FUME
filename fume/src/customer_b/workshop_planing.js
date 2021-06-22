@@ -179,7 +179,7 @@ function Workshop_planing() {
     
     let reparatur_list = []
     reparatur_list.push(
-      <div class = "flex-container" style={{ backgroundColor:'#ffd364', borderRadius:'5px', width:'80vh'}}>
+      <div class = "flex-container" style={{ backgroundColor:'#ffd364', borderRadius:'5px', width:'100%'}}>
         <div>
             ID
           </div>
@@ -198,7 +198,7 @@ function Workshop_planing() {
 
         reparatur_list.push(
           
-          <div class = "flex-container" style={{ backgroundColor:'#ffd364', borderRadius:'5px', width:'80vh'}}>
+          <div class = "flex-container" style={{ backgroundColor:'#ffd364', borderRadius:'5px', width:'100%'}}>
               <div>
                 {element.BikeService_ID}
               </div>

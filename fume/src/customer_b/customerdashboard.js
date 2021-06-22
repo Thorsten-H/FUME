@@ -18,11 +18,10 @@ function customerdashboard() {
     },
   });
   const customerData = [
-    { 'Kunden_ID': '14', 'Vorname': 'Jan', 'Nachname': 'Bern', 'Adresse': 'Q 7 68161 Mannheim', 'Aktiv': true, 'Beginndatum': '01.01.2020', 'Enddatum': '-', 'Bike_ID': 1248 },
-    { 'Kunden_ID': '45564351', 'Vorname': 'Niklas', 'Nachname': 'Müller', 'Adresse': 'Müllerstraße 555 64521 Groß Gerau', 'Aktiv': false, 'Beginndatum': '01.01.2020', 'Enddatum': '01.01.2021', 'Bike_ID': 0, },
-    { 'Kunden_ID': '12345', 'Vorname': 'Simon', 'Nachname': 'Stein', 'Adresse': 'Q 8 68161 Mannheim', 'Aktiv': true, 'Beginndatum': '01.01.2020', 'Enddatum': '-', 'Bike_ID': 9756 },
-    { 'Kunden_ID': '55', 'Vorname': 'Andres', 'Nachname': 'Gärtner', 'Adresse': 'Zeil 155 64135 Frankfurt', 'Aktiv': true, 'Beginndatum': '01.01.2020', 'Enddatum': '-', 'Bike_ID': 9762 },
-    { 'Kunden_ID': '2345310', 'Vorname': 'Thorsten', 'Nachname': 'Becker', 'Adresse': 'Bäckerstraße 3 63215 Darmstadt', 'Aktiv': false, 'Beginndatum': '01.01.2020', 'Enddatum': '01.01.2021', 'Bike_ID': 1255 }
+    { 'Kunden_ID': '99523', 'Vorname': 'Sigfried', 'Nachname': 'Abram', 'Adresse': 'Viehhofstraße 26 68165 Mannheim', 'Aktiv': true, 'Beginndatum': '01.01.2020', 'Enddatum': '-', 'Bike_ID': 782 },
+    { 'Kunden_ID': '11972', 'Vorname': 'Sophia', 'Nachname': 'Klatten', 'Adresse': 'Mercedes-Benz-Straße 12 15672 Ingolstadt', 'Aktiv': true, 'Beginndatum': '01.01.2020', 'Enddatum': '-', 'Bike_ID': 1248 },
+    { 'Kunden_ID': '1342', 'Vorname': 'Judith', 'Nachname': 'Wangkirchen', 'Adresse': 'Q8 15 68168 Mannheim', 'Aktiv': false, 'Beginndatum': '01.01.2020', 'Enddatum': '01.04.2021', 'Bike_ID': 1255 },
+    { 'Kunden_ID': '67', 'Vorname': 'Aaron', 'Nachname': 'Abelsberg', 'Adresse': 'Mannheimerweg 12 65142 Ludwigshafen', 'Aktiv': false, 'Beginndatum': '01.01.2020', 'Enddatum': '01.11.2020', 'Bike_ID': 2285 }
   ]
 
   customerData.sort(function (a, b) {

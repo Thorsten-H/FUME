@@ -13,11 +13,7 @@ function customer_overview() {
     },
   });
   const customerData = [
-    { 'Kunden_ID': '14', 'Vorname': 'Siegfried', 'Nachname': 'Bern', 'Alter':'40', 'Adresse': 'Steubenstraße 76 68169 Mannheim', 'Radius':'>10km', 'Kommunikation':'E-Mail, Telefon, Persönlich', 'Aktiv': true, 'Beginndatum': '01.01.2021', 'Enddatum': 'Datum' },
-    // { 'Kunden_ID': '45564351', 'Vorname': 'Niklas', 'Nachname': 'Müller', 'Adresse': 'Müllerstraße 555 64521 Groß Gerau', 'Aktiv': false, 'Beginndatum': 'Datum', 'Enddatum': 'Datum' },
-    // { 'Kunden_ID': '12345', 'Vorname': 'Simon', 'Nachname': 'Stein', 'Adresse': 'Q 8 68161 Mannheim', 'Aktiv': true, 'Beginndatum': 'Datum', 'Enddatum': 'Datum' },
-    // { 'Kunden_ID': '55', 'Vorname': 'Andres', 'Nachname': 'Gärtner', 'Adresse': 'Zeil 155 64135 Frankfurt', 'Aktiv': true, 'Beginndatum': 'Datum', 'Enddatum': 'Datum' },
-    // { 'Kunden_ID': '2345310', 'Vorname': 'Thorsten', 'Nachname': 'Becker', 'Adresse': 'Bäckerstraße 3 63215 Darmstadt', 'Aktiv': false, 'Beginndatum': 'Datum', 'Enddatum': 'Datum' }
+    { 'Kunden_ID': '99523', 'Vorname': 'Sigfried', 'Nachname': 'Abram', 'Alter': "40",'Adresse': 'Viehhofstraße 26 68165 Mannheim', "Radius": ">10km", "Kommunikation": "E-Mail, Telefon, Persönlich", 'Aktiv': true, 'Beginndatum': '01.01.2020', 'Enddatum': 'Datum'}
   ]
 
   let table_content = []
