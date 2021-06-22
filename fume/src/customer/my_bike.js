@@ -17,21 +17,21 @@ function My_bike() {
   // }))
 
   //const classes = useStyles();
-  const [error, setError] = React.useState('');
+  const [errorsource, setErrorsource] = React.useState('');
   const handleChange = (event) => {
-    setError(event.target.value);
+    setErrorsource(event.target.value);
   };
 
 
   function clearData()
   {  
   document.getElementById('errordescription').value = "";
-  setError("")
+  setErrorsource("")
   }
 
-  function changeDropdown(errorsource)
+  function changeDropdown(e)
   {
-  //setError(errorsource);
+  //setErrorsource(e);
   }
 
 
@@ -70,7 +70,7 @@ function My_bike() {
                 <FormControl className={mergeClasses.formControl} style={{width:"150px"}}>
                   <InputLabel>Fehlerquelle</InputLabel>
                   <Select 
-                  value={error}
+                  value={errorsource}
                   onChange={handleChange}>
                     <MenuItem value={"Vorderreifen"}>Vorderreifen</MenuItem>
                     <MenuItem value={"Frontlicht"}>Frontlicht</MenuItem>
