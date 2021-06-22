@@ -1,4 +1,4 @@
-import React, { Component }  from 'react';
+import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup} from 'react-leaflet'
 import "./find_bike.css"
 import L from 'leaflet';

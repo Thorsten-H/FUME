@@ -3,7 +3,7 @@ import My_bike from "./my_bike"
 import Find_bike from "./find_bike"
 import Customer_overview from "./customer_overview"
 import Customer_care from "./customer_care"
-import React, { Component }  from 'react';
+import React from 'react';
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import logo from './../FUME_logo.png'
