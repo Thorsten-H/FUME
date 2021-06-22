@@ -1,5 +1,5 @@
 import "./my_bike.css"
-import React, { useState }  from 'react';
+import React  from 'react';
 import bike from './../asset/bike_fume.png'
 import { Select, MenuItem, FormControl,InputLabel, makeStyles } from "@material-ui/core";
 import { TextField} from '@material-ui/core';
@@ -8,7 +8,7 @@ import { mergeClasses } from "@material-ui/styles";
 
 
 
-function my_bike() {
+function My_bike() {
 
   // const useStyles = makeStyles(theme => ({  
   // formControl: {
@@ -17,12 +17,22 @@ function my_bike() {
   // }))
 
   //const classes = useStyles();
-  const [value, setValue] = ""
+  const [error, setError] = React.useState('');
+  const handleChange = (event) => {
+    setError(event.target.value);
+  };
 
-  const handleChange = e => setValue(e.target.value)
 
+  function clearData()
+  {  
+  document.getElementById('errordescription').value = "";
+  setError("")
+  }
 
-
+  function changeDropdown(errorsource)
+  {
+  //setError(errorsource);
+  }
 
 
   return (
@@ -30,37 +40,38 @@ function my_bike() {
     
     <div> 
 
-      <h1>Fahrradübersicht</h1>
       <div >
-        <img usemap="#bike" src={bike} width="735" height="439" alt="Fahrrad" style={{borderRadius: '10px'}}/>
+        <img usemap="#bike" src={bike} width="735" height="439" alt="Fahrrad" style={{borderRadius: '10px', borderStyle: "solid", borderColor: '#ffd364', margin: '30px'}}/>
         <map name ="bike">
-          <area id = "Vorderreifen" shape="rect" coords="57,325,251,376"  alt="Vorderreifen" href="#/customer/my_bike"></area>
-          <area id = "Frontlicht" shape="rect" coords="21,144,178,195"  alt="Vorderlicht" href="#/customer/my_bike"></area>
-          <area id = "Pedal" shape="rect" coords="305,349,431,402"  alt="Pedal" href="#/customer/my_bike"></area>
-          <area id = "Lenkrad" shape="rect" coords="19,28,162,77"  alt="Lenkrad" href="#/customer/my_bike"></area>
-          <area id = "Sattel" shape="rect" coords="527,21,653,75"  alt="Sattel" href="#/customer/my_bike"></area>
-          <area id = "Schaltung" shape="rect" coords="361,201,526,253"  alt="Schaltung" href="#/customer/my_bike"></area>
-          <area id = "Rücklicht" shape="rect" coords="546,148,706,201"  alt="Rücklicht" href="#/customer/my_bike"></area>
-          <area id = "Hinterreifen" shape="rect" coords="493,324,689,377"  alt="Hinterreifen" href="#/customer/my_bike"></area>
+          <area id = "Vorderreifen" shape="rect" coords="57,325,251,376" onClick={changeDropdown("Vorderreifen")}  alt="Vorderreifen" href="#/customer/my_bike"></area>
+          <area id = "Frontlicht" shape="rect" coords="21,144,178,195" onClick={changeDropdown("Frontlicht")} alt="Vorderlicht" href="#/customer/my_bike"></area>
+          <area id = "Pedal" shape="rect" coords="305,349,431,402" onClick={changeDropdown("Pedal")} alt="Pedal" href="#/customer/my_bike"></area>
+          <area id = "Lenkrad" shape="rect" coords="19,28,162,77" onClick={changeDropdown("Lenkrad")} alt="Lenkrad" href="#/customer/my_bike"></area>
+          <area id = "Sattel" shape="rect" coords="527,21,653,75" onClick={changeDropdown("Sattel")} alt="Sattel" href="#/customer/my_bike"></area>
+          <area id = "Schaltung" shape="rect" coords="361,201,526,253" onClick={changeDropdown("Schaltung")} alt="Schaltung" href="#/customer/my_bike"></area>
+          <area id = "Rücklicht" shape="rect" coords="546,148,706,201" onClick={changeDropdown("Rücklicht")} alt="Rücklicht" href="#/customer/my_bike"></area>
+          <area id = "Hinterreifen" shape="rect" coords="493,324,689,377" onClick={changeDropdown("Hinterreifen")} alt="Hinterreifen" href="#/customer/my_bike"></area>
         </map>
 
       </div>        
 
       <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
 
-        <div style={{backgroundColor: "white", borderRadius: '10px', width: '800px', display: 'flex',  justifyContent:'center', alignItems:'center'}}>
-         <h2>
+        <div style={{backgroundColor: "white", borderRadius: '10px', width: '800px', display: 'flex',  justifyContent:'center', padding: '10px', alignItems:'center'}}>
+         <h3>
           Fehlermeldung anlegen
-        </h2>         
+        </h3>         
           <div>
-          <form className="contact-form" onSubmit={(e) => {}}>
-            <table>
+          <form  className="contact-form" onSubmit={(e) => {}} >
+            <table cellspacing="5" cellpadding="8" align="center" valign="top">
               <tr>
               <br />
               <td>
                 <FormControl className={mergeClasses.formControl} style={{width:"150px"}}>
                   <InputLabel>Fehlerquelle</InputLabel>
-                  <Select >
+                  <Select 
+                  value={error}
+                  onChange={handleChange}>
                     <MenuItem value={"Vorderreifen"}>Vorderreifen</MenuItem>
                     <MenuItem value={"Frontlicht"}>Frontlicht</MenuItem>
                     <MenuItem value={"Pedal"}>Pedal</MenuItem>
@@ -69,16 +80,18 @@ function my_bike() {
                     <MenuItem value={"Schaltung"}>Schaltung</MenuItem>
                     <MenuItem value={"Rücklicht"}>Rücklicht</MenuItem>
                     <MenuItem value={"Hinterreifen"}>Hinterreifen</MenuItem>
+                    <MenuItem value={"Diebstahl"}>Diebstahl</MenuItem>
+                    <MenuItem value={"Sonstiges"}> Sonstiges</MenuItem>
                   </Select>
                  </FormControl>
                 </td>
 
               <td><TextField
-                id="outlined-basic"
+                id="errordescription"
                 placeholder="Fehlerbeschreibung einfügen"
                 label="Fehlerbeschreibung"
                 variant="outlined"
-                style={{ border: '1px solid #ffd364', width:'300px' }}
+                style={{width:'300px', color:'red'}}
                 //value={this.state.name}
                 //onChange={(e) => this.setState({ name: e.target.value })}
                 required
@@ -88,7 +101,7 @@ function my_bike() {
               <br />
               <td>
               <div className="button--container">
-                <Button style={{ width:'50px', backgroundColor: "#ffd364", color:"black"}} variant="contained" color="primary">
+                <Button onClick= {clearData} style={{ width:'70px', backgroundColor: "#ffd364", color:"black"}} variant="contained" color="primary">
                   Submit
                 </Button>
               </div>
@@ -107,4 +120,4 @@ function my_bike() {
   );
 }
 
-export default my_bike;
+export default My_bike;
