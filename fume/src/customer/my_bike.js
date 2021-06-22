@@ -4,6 +4,7 @@ import bike from './../asset/bike_fume.png'
 import { Select, MenuItem, FormControl,InputLabel } from "@material-ui/core";
 import { TextField } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
+import {InputBase, makeStyles} from '@material-ui/core';
 
 function My_bike() {
   const [defekt, setDefekt] = React.useState(0);
@@ -16,6 +17,27 @@ function My_bike() {
   document.getElementById('errordescription').value = "";
   setDefekt("")
   }
+  
+
+  const UseStyles = makeStyles((theme) => ({
+    root: {
+      '& > *': {
+        margin: theme.spacing(1),
+        width: '25ch',
+      },   
+    },
+  
+    inputBase:{
+      border: '1px solid #ffd364',
+      borderRadius: theme.shape.borderRadius,
+      height: "7vh",
+      width: '300px',
+      padding: theme.spacing(2)
+    }
+  }));
+
+  const classes = UseStyles();
+
 
   return (
     <div> 
@@ -62,7 +84,16 @@ function My_bike() {
                   </td>
 
                   <td>
-                    <TextField id="errordescription" placeholder="Fehlerbeschreibung einfügen" label="Fehlerbeschreibung" variant="outlined" style={{width:'300px', color:'red'}} required type="text"/>
+                  <InputBase
+                    id="errordescription" 
+                    placeholder="Fehlerbeschreibung einfügen" 
+                    variant="outlined" 
+                    className={classes.inputBase}
+                    required
+                    label="Fehlerbeschreibung"
+                    type="text"
+                  />
+                    {/* <TextField id="errordescription" placeholder="Fehlerbeschreibung einfügen" label="Fehlerbeschreibung" variant="outlined" style={{width:'300px', color:'red'}} required type="text"/> */}
                   </td>
                   <br />
                   <td>
