@@ -12,6 +12,11 @@ function My_bike() {
     setDefekt(event.target.value);
   };
 
+  function clearData() {
+  document.getElementById('errordescription').value = "";
+  setDefekt("")
+  }
+
   return (
     <div> 
       <div >
@@ -62,7 +67,7 @@ function My_bike() {
                   <br />
                   <td>
                     <div className="button--container">
-                      <Button onClick={handleChange} style={{ width:'70px', backgroundColor: "#ffd364", color:"black"}} variant="contained" color="primary">
+                      <Button onClick={clearData} style={{ width:'70px', backgroundColor: "#ffd364", color:"black"}} variant="contained" color="primary">
                         Submit
                       </Button>
                     </div>
