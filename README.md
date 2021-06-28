@@ -1,6 +1,6 @@
 # FUME
 
-![FUME-Logo](FUME_Logo.png)
+![FUME-Logo](FUME_logo.png)
 
 The project was created in connection with the Projektrealization seminar in the Data Science course at the Baden-Württemberg Cooperative State University (DHBW) Mannheim. An extended documentation is stored as PDF.
 
